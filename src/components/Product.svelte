@@ -1,5 +1,26 @@
 <script>
+  import { cart } from "../store";
   export let product;
+
+  let inCart = false;
+
+  $: {
+    $cart.forEach((item) => {
+      if (item.id == product.id) {
+        inCart = true;
+      }
+    });
+  }
+
+  function addToCart() {
+    if (!inCart) {
+      let updatedCart = [...$cart, { ...product, quantity: 1 }];
+
+      cart.set(updatedCart);
+    } else {
+      alert("Item already added to Cart");
+    }
+  }
 </script>
 
 <main>
@@ -15,7 +36,11 @@
             {product.shortdesc}
           </small>
         </p>
-        <a href="#" class="btn btn-primary">Add to Cart</a>
+        <button
+          on:click={() => addToCart()}
+          class="btn btn-primary"
+          disabled={inCart}>{inCart ? "Added" : "Add to Cart"}</button
+        >
       </div>
     </div>
   </div>
