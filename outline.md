@@ -1,4 +1,4 @@
-# Authenticating Svelte Apps with Auth0
+# State Management in Svelte Applications
 
 **TL;DR:**
 
@@ -6,24 +6,17 @@
 
 ## Prerequisites
 
-## Creating the Auth0 Project
+## Cloning the demo e-commerce project
 
-## Scaffolding the Svelte project
+## Creating the state management store
 
-## Setting up Authentication with Auth0
+## Loading products to the home page from the store
 
-### Creating a Svelte store to hold authentication state
+## Adding items to the shopping cart
 
-### Creating an authentication service
-
-## Building the Task List
-
-### Creating a List Item Component
-
-### Building the Task List page
-
-### Adding authentication to the Task List page
+## Changing items quantity and removing items from the cart
 
 ## Running the Application
 
 ## Conclusion
+
