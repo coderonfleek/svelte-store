@@ -24,12 +24,12 @@
       } else {
         //Remove the item
 
-        removeItem(product);
+        removeItem();
       }
     }
   }
 
-  function removeItem(product) {
+  function removeItem() {
     let removedItemCart = $cart.filter((cartItem) => {
       return cartItem.id != product.id;
     });
